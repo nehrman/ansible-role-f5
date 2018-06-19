@@ -16,6 +16,6 @@
     password: "{{ bigip_password }}"
     validate_certs: "{{ bigip_use_ssl }}"
     pool: "{{ bigip_pool_name }}"
-    host: "{{ bigip_node_ip }}"
+    host: "{{ inventory_hostname }}"
     port: "{{ bigip_node_port }}"
     state: present
