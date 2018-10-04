@@ -1,21 +1,9 @@
 ---
-# - name: Ensure Nodes are added to F5
-#   bigip_node:
-#     server: "{{ bigip_host }}"
-#     user: "{{ bigip_username }}"
-#     password: "{{ bigip_password }}"
-#     validate_certs: "{{ bigip_use_ssl }}"
-#     name: "{{ inventory_hostname }}"
-#     host: "{{ bigip_node_ip }}"
-#     state: present
 
-- name: Ensure state of node and pool membership
-  bigip_pool_member:
-    server: "{{ bigip_host }}"
-    user: "{{ bigip_username }}"
-    password: "{{ bigip_password }}"
-    validate_certs: "{{ bigip_use_ssl }}"
-    pool: "{{ bigip_pool_name }}"
+- name: Ensure Pool {{ bigip_pool_name }} is present
+  bigip_pool:
+    partition: common
+    name: "{{ bigip_pool_name }}"
     host: "{{ bigip_node_ip }}"
     port: "{{ bigip_node_port }}"
     state: present
