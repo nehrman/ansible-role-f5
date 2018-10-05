@@ -11,5 +11,6 @@
   bigip_pool_member:
     pool: "{{ bigip_pool_name }}"
     name: "{{ bigip_node_ip }}"
+    reuse_nodes: true
     port: "{{ bigip_node_port }}"
     state: present
