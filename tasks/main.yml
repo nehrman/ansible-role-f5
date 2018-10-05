@@ -7,3 +7,6 @@
 
 - include_tasks: add_virtual_server.yml
 
+- debug;
+    msg: "Hello World !!"
+
