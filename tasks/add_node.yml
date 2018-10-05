@@ -1,7 +1,7 @@
 ---
 - name: Ensure Node {{ ansible_inventory }} is present 
   bigip_node:
-    name: "{{ ansible_inventory }}"
+    name: "{{ inventory_hostname }}"
     address: "{{ bigip_node_ip }}"
     monitors:
       - "{{ bigip_pool_monitor }}"
