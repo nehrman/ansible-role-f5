@@ -10,7 +10,7 @@
 - name: Ensure Node {{ inventory_hostname }} is present in {{ bigip_pool_name }} Pool
   bigip_pool_member:
     pool: "{{ bigip_pool_name }}"
-    name: "{{ bigip_node_ip }}"
+    name: "{{ inventory_hostname }}"
     reuse_nodes: true
-#    port: "{{ bigip_node_port }}"
+    port: "{{ bigip_node_port }}"
     state: present
