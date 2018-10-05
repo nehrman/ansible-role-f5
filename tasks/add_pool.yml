@@ -7,7 +7,7 @@
       - "{{ bigip_pool_monitor }}"
     state: present
 
-- name: Ensure Node {{ ansible_inventory }} is present in {{ bigip_pool_name }} Pool
+- name: Ensure Node {{ inventory_hostname }} is present in {{ bigip_pool_name }} Pool
   bigip_pool_member:
     pool: "{{ bigip_pool_name }}"
     name: "{{ bigip_node_ip }}"
