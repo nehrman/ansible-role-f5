@@ -1,0 +1,8 @@
+---
+- name: Ensure Node {{ ansible_inventory }} is present 
+  bigip_node:
+    name: "{{ ansible_inventory }}"
+    address: "{{ bigip_node_ip }}"
+    monitors:
+      - "{{ bigip_pool_monitor }}"
+    state: present
