@@ -1,8 +1,11 @@
 ---
-
-- name: Ensure state of node and pool membership
-  bigip_pool_member:
-    pool: "{{ bigip_pool_name }}"
-    host: "{{ bigip_node_ip }}"
-    port: "{{ bigip_node_port }}"
+- name: Ensure Virtual Server {{ bigip_vs_name }} is present
+  bigip_virtual_server:
+    name: "{{ bigip_vs_name }}"
+    source: "{{ bigip_vs_src_ip }}"
+    destination: "{{ bigip_vs_dest_ip }}"
+    port: "{{ bigip_vs_port }}"
+    pool: "{{ bigip_pool_name }}"
+    snat: "{{ bigip_vs_snat }}"
+    description: "{{ bigip_vs_desc }}"
     state: present

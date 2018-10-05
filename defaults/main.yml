@@ -1,0 +1,12 @@
+---
+bigip_vs_name: "{{ infra }}-{{ bigip_apps }}-vs"
+bigip_vs_src_ip: "0.0.0.0/0"
+bigip_vs_dest_ip: ""
+bigip_vs_port: ""
+bigip_vs_snat: "automap"
+bigip_vs_desc: ""
+bigip_pool_lb_method: ""
+bigip_pool_name: "{{ infra }}-{{ bigip_apps }}-pool"
+bigip_pool_monitor: "{{ bigip_monitor_name }}"
+bigip_monitor_name: "{{ bigip_apps }}-mon"
+bigip_apps: ""

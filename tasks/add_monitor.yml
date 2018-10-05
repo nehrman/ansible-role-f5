@@ -1,0 +1,6 @@
+---
+- name: Ensure Monitor {{ bigip_monitor_name }} is present 
+  bigip_monitor_http:
+    name: "{{ bigip_monitor_name }}"
+    port: "{{ bigip_node_port }}"
+    state: present

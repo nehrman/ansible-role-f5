@@ -1,0 +1,7 @@
+---
+- include_tasks: add_monitor.yml
+
+- include_tasks: add_pool.yml
+
+- include_tasks: add_virtual_server.yml
+

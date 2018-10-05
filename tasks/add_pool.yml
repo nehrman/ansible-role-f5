@@ -1,9 +1,15 @@
 ---
-
 - name: Ensure Pool {{ bigip_pool_name }} is present
   bigip_pool:
-    partition: common
     name: "{{ bigip_pool_name }}"
+    lb_method: "{{ bigip_pool_lb_method }}"
+    monitors: 
+      - "{{ bigip_pool_monitor }}"
+    state: present
+
+- name: Ensure Node {{ ansible_inventory }} is present in {{ bigip_pool_name }} Pool
+  bigip_pool_member:
+    pool: "{{ bigip_pool_name }}"
     host: "{{ bigip_node_ip }}"
     port: "{{ bigip_node_port }}"
     state: present
