@@ -9,7 +9,7 @@
     snat: "{{ bigip_vs_snat }}"
     description: "{{ bigip_vs_desc }}"
     default_persistence_profile: "{{ bigip_vs_def_persistence_prof }}"
-    profile: 
+    profiles: 
       - http
       - tcp
     state: present
