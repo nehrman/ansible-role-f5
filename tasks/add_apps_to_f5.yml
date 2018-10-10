@@ -1,8 +1,8 @@
 ---
-- include_tasks: ./add/add_monitor.yml
+- include_tasks: ../../add/add_monitor.yml
 
-- include_tasks: ./add/add_node.yml
+- include_tasks: ../../add/add_node.yml
 
-- include_tasks: ./add/add_pool.yml
+- include_tasks: ../../add/add_pool.yml
 
-- include_tasks: ./add/add_virtual_server.yml
+- include_tasks: ../../add/add_virtual_server.yml
