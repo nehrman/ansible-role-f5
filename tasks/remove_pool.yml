@@ -1,10 +1,10 @@
 ---
-- name: Ensure Nodes are absent in {{ bigip_pool_name }} Pool
-  bigip_pool_member:
-    pool: "{{ bigip_pool_name }}"
-    name: "{{ inventory_hostname }}"
-    port: "{{ bigip_node_port }}"
-    state: absent
+# - name: Ensure Nodes are absent in {{ bigip_pool_name }} Pool
+#   bigip_pool_member:
+#     pool: "{{ bigip_pool_name }}"
+#     name: "{{ inventory_hostname }}"
+#     port: "{{ bigip_node_port }}"
+#     state: absent
 
 - name: Ensure Pool {{ bigip_pool_name }} is absent
   bigip_pool:
