@@ -6,7 +6,7 @@
     monitors: 
       - "{{ bigip_pool_monitor }}"
     state: present
-run_once: true
+  run_once: true
 
 - name: Ensure Node {{ inventory_hostname }} is present in {{ bigip_pool_name }} Pool
   bigip_pool_member:
