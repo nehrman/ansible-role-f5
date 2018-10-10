@@ -13,3 +13,4 @@
       - http
       - tcp
     state: present
+  run_once: true
