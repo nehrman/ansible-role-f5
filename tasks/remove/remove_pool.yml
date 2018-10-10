@@ -1,0 +1,13 @@
+---
+- name: Ensure Nodes are absent in {{ bigip_pool_name }} Pool
+  bigip_pool_member:
+    pool: "{{ bigip_pool_name }}"
+    name: "{{ inventory_hostname }}"
+    state: absent
+
+- name: Ensure Pool {{ bigip_pool_name }} is absent
+  bigip_pool:
+    name: "{{ bigip_pool_name }}"
+    state: absent
+  run_once: true
+

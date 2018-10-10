@@ -1,0 +1,5 @@
+---
+- name: Ensure Monitor {{ bigip_monitor_name }} is absent 
+  bigip_monitor_http:
+    name: "{{ bigip_monitor_name }}"
+    state: absent

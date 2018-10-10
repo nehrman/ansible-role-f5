@@ -1,0 +1,8 @@
+---
+- name: Ensure Nodes are present 
+  bigip_node:
+    name: "{{ inventory_hostname }}"
+    address: "{{ bigip_node_ip }}"
+    monitors:
+      - "{{ bigip_pool_monitor }}"
+    state: present

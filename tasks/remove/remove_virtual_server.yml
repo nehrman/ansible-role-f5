@@ -1,0 +1,6 @@
+---
+- name: Ensure Virtual Server {{ bigip_vs_name }} is absent
+  bigip_virtual_server:
+    name: "{{ bigip_vs_name }}"
+    state: absent
+  run_once: true
