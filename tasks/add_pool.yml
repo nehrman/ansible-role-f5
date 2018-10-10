@@ -8,7 +8,7 @@
     state: present
   run_once: true
 
-- name: Ensure Node {{ inventory_hostname }} is present in {{ bigip_pool_name }} Pool
+- name: Ensure Nodes are present in {{ bigip_pool_name }} Pool
   bigip_pool_member:
     pool: "{{ bigip_pool_name }}"
     name: "{{ inventory_hostname }}"
