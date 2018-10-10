@@ -4,3 +4,4 @@
     name: "{{ bigip_monitor_name }}"
     port: "{{ bigip_node_port }}"
     state: present
+  run_once: true

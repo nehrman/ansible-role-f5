@@ -3,3 +3,4 @@
   bigip_monitor_http:
     name: "{{ bigip_monitor_name }}"
     state: absent
+  run_once: true
